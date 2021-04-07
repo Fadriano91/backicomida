@@ -1,0 +1,43 @@
+//Teste de requisições - Categoria
+
+@baseURL = http://localhost:4000
+@id = 606d2025bb3a8e8bbd7b15cf
+@idCategoria = 
+
+###
+//GET - Lista os restaurantes
+GET {{baseURL}}/restaurantes
+Content-Type: application/json
+
+###
+//GET - Lista o restaurante pelo id
+GET {{baseURL}}/restaurantes/{{id}}
+Content-Type: application/json
+
+###
+//GET - Lista o restaurante pelo id da categoria
+GET {{baseURL}}/restaurantes/categoria/{{idCategoria}}
+Content-Type: application/json
+
+###
+//POST - Inclui um novo restaurante
+POST {{baseURL}}/restaurantes
+Content-Type: application/json
+
+{"nome": "Churrascaria", "status": "ativo"}
+
+###
+//DELETE - Apaga um restaurante
+DELETE {{baseURL}}/restaurantes/{{id}}
+Content-Type: application/json
+
+###
+//PUT - Altera o restaurante
+PUT {{baseURL}}/restaurantes
+Content-Type: application/json
+
+{
+"_id" : "606e1d5765145932ef310f78",
+"nome" : "Churrascarias Alterado",
+"status" : "ativo"
+}

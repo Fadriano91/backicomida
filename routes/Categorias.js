@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
         res.json(categorias)
     } catch (err) {
         res.status(500).send({
-            errors: [{ message: 'Mão foi possivel obter as categorias!' }]
+            errors: [{ message: 'Não foi possivel obter as categorias!' }]
         })
     }
 })
@@ -29,7 +29,7 @@ router.get('/:id', async (req, res) => {
         res.json(categoria)
     } catch (err) {
         res.status(500).send({
-            errors: [{ message: `Mão foi possivel obter a categoria com id ${req.params.id}` }]
+            errors: [{ message: `Não foi possivel obter a categoria com id ${req.params.id}` }]
         })
     }
 })
