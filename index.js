@@ -36,7 +36,7 @@ app.use(express.json())
 
 app.get('/', (req, res) => {
     res.json({mensagem: "API iComida 100% funcional! 👏",
-        versao: '1.0.1'})
+        versao: '1.0.2'})
 })
 /* Rotas da Categoria */
 app.use('/categorias', rotasCategoria)
