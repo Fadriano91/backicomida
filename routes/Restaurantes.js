@@ -60,8 +60,15 @@ router.get('/:id', async (req, res) => {
  * Post /restaurantes
  * *******************************/
 const validaRestaurante = [
-    check("nome", "Nome do Restaurante é obrigatório").not().isEmpty(),
-    check("status", "Informe um status válido para o restaurante.").isIn(['ativo', 'inativo'])
+    check("nome", "Nome do Restaurante é obrigatório").not().isEmpty()
+    .isLength({ min: 5}).withMessage("Nome do restaurante é muito curto"),
+    check("status", "Informe um status válido para o restaurante.").isIn(['ativo', 'inativo']),
+    check("notaMedia")
+    .isNumeric().withMessage("A nota média deve ser um número")
+    .isFloat({min:0, max:5}).withMessage("A nota deve ser um número entre 0 a 5"),
+    check("categoria")
+    .isMongoId().trim().withMessage("A categoria do restaurante é inválida"),
+    check("faixaPreco", "A faixa de preço informada é inválida").isIn(["barato","médio","luxo"])
 ]
 
 router.post('/', validaRestaurante,

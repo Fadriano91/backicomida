@@ -1,6 +1,6 @@
 //Teste de requisições - Categoria
 
-@baseURL = http://localhost:4000
+@baseURL = http://localhost:4001
 @id = 606d2025bb3a8e8bbd7b15cf
 @idCategoria = 
 
@@ -24,7 +24,13 @@ Content-Type: application/json
 POST {{baseURL}}/restaurantes
 Content-Type: application/json
 
-{"nome": "Churrascaria", "status": "ativo"}
+{"nome": "Meninos4", 
+ "status": "ativo",
+ "notaMedia": 4.7,
+ "categoria": "606e1d5765145932ef310f78",
+ "faixaPreco": "barato",
+ "tempoEntrega": "45 a 60min" 
+ }
 
 ###
 //DELETE - Apaga um restaurante

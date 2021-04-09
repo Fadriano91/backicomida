@@ -1,6 +1,6 @@
 //Teste de requisições - Categoria
 
-@baseURL = http://localhost:4000
+@baseURL = http://localhost:4001
 @id = 606d2025bb3a8e8bbd7b15cf
 
 ###
@@ -18,7 +18,7 @@ Content-Type: application/json
 POST {{baseURL}}/categorias
 Content-Type: application/json
 
-{"nome": "Churrascaria", "status": "ativo"}
+{"nome": "Churrascaria3", "status": "ativo"}
 
 ###
 //DELETE - Apaga uma categoria
